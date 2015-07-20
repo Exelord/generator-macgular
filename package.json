@@ -1,6 +1,6 @@
 {
   "name": "generator-macgular",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Yeoman angular generator",
   "main": "app/index.js",
   "files": [
@@ -9,6 +9,10 @@
   "keywords": [
     "yeoman-generator"
   ],
+  "repository": {
+ 	"type": "git",
+ 	"url": "https://github.com/exelord/generator-macgular.git"
+  },
   "author": "Maciej Kwaśniak",
   "license": "MIT",
   "dependencies": {
