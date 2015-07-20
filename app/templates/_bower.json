@@ -1,0 +1,67 @@
+{
+  "name": "<%- appName %>",
+  "version": "0.0.0",
+  "dependencies": {
+<% if (includeModernizr) { -%>
+    "modernizr": "",
+<% } if (angularModulesObject.animate) { -%>
+    "angular-animate": "<%- props.angularVersion %>",
+<% } if (angularModulesObject.cookies) { -%>
+    "angular-cookies": "<%- props.angularVersion %>",
+<% } if (angularModulesObject.touch) { -%>
+    "angular-touch": "<%- props.angularVersion %>",
+<% } if (angularModulesObject.sanitize) { -%>
+    "angular-sanitize": "<%- props.angularVersion %>",
+<% } if (props.jQuery.key === 'jquery1') { -%>
+    "jquery": "~1.11.3",
+<% } if (props.jQuery.key === 'jquery2') { -%>
+    "jquery": "",
+<% } if (props.jQuery.key === 'zepto') { -%>
+    "zeptojs": "~1.1.6",
+<% } if (props.resource.key === 'angular-resource') { -%>
+    "angular-resource": "<%- props.angularVersion %>",
+<% } if (props.resource.key === 'restangular') { -%>
+    "restangular": "",
+<% } if (props.router.key === 'angular-route') { -%>
+    "angular-route": "<%- props.angularVersion %>",
+<% } if (props.router.key === 'ui-router') { -%>
+    "angular-ui-router": "",
+<% } if(props.ui.key === 'bootstrap') { -%>
+<%   if(props.cssPreprocessor.extension === 'scss') { -%>
+    "bootstrap-sass-official": "",
+<%   } else if(props.cssPreprocessor.extension === 'styl') { -%>
+    "bootstrap-stylus": "",
+<%   } else { -%>
+    "bootstrap": "",
+<%   } -%>
+<% } if(props.ui.key === 'foundation') { -%>
+    "foundation": "~5.5.2",
+<% } if(props.ui.key === 'angular-material') { -%>
+    "angular-material": "",
+<% } if(props.bootstrapComponents.key === 'ui-bootstrap') { -%>
+    "angular-bootstrap": "",
+<% } if(props.bootstrapComponents.key === 'angular-strap') { -%>
+    "angular-strap": "~2.2.4",
+<% } if(props.foundationComponents.key === 'angular-foundation') { -%>
+    "angular-foundation": "~0.6.0",
+<% } if(props.jsPreprocessor.key === 'traceur') { -%>
+    "traceur-runtime": "~0.0.90",
+<% } -%>
+    "animate.css": "",
+    "angular": "<%- props.angularVersion %>"
+  },
+  "devDependencies": {
+    "angular-mocks": "<%- props.angularVersion %>"
+  },
+<% if (bowerOverrides !== null) { -%>
+  "overrides": <%- bowerOverrides %>,
+<% } -%>
+  "resolutions": {
+<% if (props.jQuery.key === 'jquery1') { -%>
+    "jquery": "~1.11.3",
+<% } if (props.jQuery.key === 'jquery2') { -%>
+    "jquery": "",
+<% } -%>
+    "angular": "<%- props.angularVersion %>"
+  }
+}
