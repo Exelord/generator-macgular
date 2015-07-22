@@ -10,7 +10,7 @@
         url: '/',
         templateUrl: 'app/components/home/partials/home.html',
         controller: 'HomeCtrl',
-        controllerAs: 'home'
+        controllerAs: 'HomeCtrl'
       });
 
     $urlRouterProvider.otherwise('/');
