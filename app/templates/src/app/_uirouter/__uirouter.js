@@ -3,7 +3,6 @@
 
   var home = angular.module('home', ['home.controller']);
 
-  /** @ngInject */
   home.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
