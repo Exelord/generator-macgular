@@ -64,6 +64,7 @@
     "jade": "~1.11.0",
 <% } if (props.htmlPreprocessor.key === 'haml') { -%>
     "haml": "~0.4.3",
+    "gulp-ruby-haml": "0.0.4",
 <% } if (props.htmlPreprocessor.key === 'handlebars') { -%>
     "handlebars": "~3.0.3",
 <% } -%>

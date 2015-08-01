@@ -1,6 +1,6 @@
 {
   "name": "generator-macgular",
-  "version": "1.0.5",
+  "version": "1.0.9",
   "description": "Yeoman angular generator",
   "main": "app/index.js",
   "files": [

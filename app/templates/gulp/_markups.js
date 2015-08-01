@@ -3,6 +3,9 @@
 var path = require('path');
 var gulp = require('gulp');
 var conf = require('./conf');
+<% if (props.htmlPreprocessor.key === 'haml') { -%>
+var haml = require('gulp-ruby-haml');
+<% } -%>
 
 var browserSync = require('browser-sync');
 
@@ -17,7 +20,7 @@ gulp.task('markups', function() {
 <% if (props.htmlPreprocessor.key === 'jade') { -%>
     .pipe($.consolidate('jade', { basedir: conf.paths.src, doctype: 'html', pretty: '  ' })).on('error', conf.errorHandler('Jade'))
 <% } else if (props.htmlPreprocessor.key === 'haml') { -%>
-    .pipe($.consolidate('haml')).on('error', conf.errorHandler('Haml'))
+    .pipe(haml())
 <% } else if (props.htmlPreprocessor.key === 'handlebars') { -%>
     .pipe($.consolidate('handlebars')).on('error', conf.errorHandler('Handlebars'))
 <% } -%>

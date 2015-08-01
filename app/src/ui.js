@@ -9,14 +9,14 @@ module.exports = function(GulpAngularGenerator) {
   GulpAngularGenerator.prototype.uiFiles = function uiFiles() {
 
     this.files.push({
-      src: 'src/app/shared/navbar/partials',
-      dest: 'src/app/shared/navbar/partials',
+      src: 'src/app/shared/navbar/partials/*.'+this.props.htmlPreprocessor.extension,
+      dest: 'src/app/shared/navbar/partials/',
       template: true
     });
 
     this.files.push({
-      src: 'src/app/components/home/partials',
-      dest: 'src/app/components/home/partials',
+      src: 'src/app/components/home/partials/*.'+this.props.htmlPreprocessor.extension,
+      dest: 'src/app/components/home/partials/',
       template: true
     });
 
