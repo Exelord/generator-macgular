@@ -25,7 +25,7 @@ module.exports = function(GulpAngularGenerator) {
       .map(function (dependency) {
         return '\'' + dependency + '\'';
       })
-      .join(',\r\n\t\t');
+      .join(',');
   };
 
   /**

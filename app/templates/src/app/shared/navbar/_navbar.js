@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var navbar = angular.module('macgular');
+  var navbar = angular.module('<%- appName %>');
 
   navbar.controller('NavbarCtrl', function () {
     var vm = this;

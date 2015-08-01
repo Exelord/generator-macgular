@@ -7,15 +7,16 @@ module.exports = function(GulpAngularGenerator) {
    * and the css preprocessor
    */
   GulpAngularGenerator.prototype.uiFiles = function uiFiles() {
+
     this.files.push({
-      src: 'src/app/shared/',
-      dest: 'src/app/shared/',
+      src: 'src/app/shared/navbar/partials',
+      dest: 'src/app/shared/navbar/partials',
       template: true
     });
 
     this.files.push({
-      src: 'src/app/components/',
-      dest: 'src/app/components/',
+      src: 'src/app/components/home/partials',
+      dest: 'src/app/components/home/partials',
       template: true
     });
 

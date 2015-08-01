@@ -30,6 +30,12 @@
     "src/app/index.constants.js",
     "src/app/index.run.js",
 
+    "src/app/shared/navbar/navbar.js",
+
+    "src/app/components/home/home.controller.js",
+    "src/app/components/home/home.module.js",
+    "src/app/components/home/test/home.controller.spec.js",
+
 
     "karma.conf.js",
 

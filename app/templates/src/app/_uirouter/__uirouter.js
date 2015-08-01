@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var home = angular.module('home', ['home.controller']);
+  var home = angular.module('home.config', []);
 
   home.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider

@@ -91,17 +91,17 @@
     "choices": [
       {
         "value": {
-          "key": "angular-resource",
-          "module": "ngResource"
-        },
-        "name": "ngResource, the official support for RESTful services"
-      },
-      {
-        "value": {
           "key": "restangular",
           "module": "restangular"
         },
         "name": "Restangular, an alternative service to handles RESTful requests"
+      },
+      {
+        "value": {
+          "key": "angular-resource",
+          "module": "ngResource"
+        },
+        "name": "ngResource, the official support for RESTful services"
       },
       {
         "value": {
@@ -245,17 +245,17 @@
     "choices": [
       {
         "value": {
-          "key": "node-sass",
-          "extension": "scss"
-        },
-        "name": "Sass (Node), Node.js binding to libsass, the C version of the popular stylesheet preprocessor, Sass."
-      },
-      {
-        "value": {
           "key": "ruby-sass",
           "extension": "scss"
         },
         "name": "Sass (Ruby), Original Syntactically Awesome StyleSheets (requires Ruby)"
+      },
+      {
+        "value": {
+          "key": "node-sass",
+          "extension": "scss"
+        },
+        "name": "Sass (Node), Node.js binding to libsass, the C version of the popular stylesheet preprocessor, Sass."
       },
       {
         "value": {
@@ -314,6 +314,13 @@
           "extension": "html"
         },
         "name": "None, I like to code in standard HTML."
+      },
+      {
+        "value": {
+          "key": "haml",
+          "extension": "haml"
+        },
+        "name": "Haml (*.haml)"
       }
     ]
   }

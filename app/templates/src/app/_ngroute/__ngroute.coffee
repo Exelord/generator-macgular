@@ -1,4 +1,4 @@
-home = angular.module '<%- appName %>'
+home = angular.module 'home.config', []
 
 home.config ($routeProvider) ->
   $routeProvider

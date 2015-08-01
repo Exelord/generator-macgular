@@ -1,4 +1,1 @@
-angular.module '<%- appName %>', [
-	<%- modulesDependencies %>,
-	'home'
-]
+angular.module '<%- appName %>', [<%- modulesDependencies %>, 'home']
