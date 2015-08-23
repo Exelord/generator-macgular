@@ -10,13 +10,13 @@ var wiredep = require('wiredep').stream;
 var _ = require('lodash');
 
 <% if (props.cssPreprocessor.key !== 'none') { -%>
-gulp.task('inject', ['scripts', 'styles'], function () {
+gulp.task('inject', ['scripts', 'styles', 'fonts:dev'], function () {
   var injectStyles = gulp.src([
     path.join(conf.paths.tmp, '/serve/app/**/*.css'),
     path.join('!' + conf.paths.tmp, '/serve/app/vendor.css')
   ], { read: false });
 <% } else { -%>
-gulp.task('inject', ['scripts'], function () {
+gulp.task('inject', ['scripts', 'fonts:dev'], function () {
   var injectStyles = gulp.src([
     path.join(conf.paths.src, '/app/**/*.css')
   ], { read: false });

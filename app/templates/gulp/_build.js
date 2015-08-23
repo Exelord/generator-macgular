@@ -99,6 +99,28 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest(path.join(conf.paths.dist, '/fonts/')));
 });
 
+gulp.task('fonts:dev', function () {
+  gulp.src([conf.paths.src+'/**/*.{eot,svg,ttf,woff,woff2}'])
+    //.pipe($.filter('**/**/*.{eot,svg,ttf,woff,woff2}'))
+    .pipe($.flatten())
+    .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/fonts/')));
+  return gulp.src(['bower_components/**/*.{eot,svg,ttf,woff,woff2}'])
+    //.pipe($.filter('**/**/*.{eot,svg,ttf,woff,woff2}'))
+    .pipe($.flatten())
+    .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/fonts/')));
+});
+
+gulp.task('fonts:dist', function () {
+  gulp.src([conf.paths.src+'/**/*.{eot,svg,ttf,woff,woff2}'])
+    //.pipe($.filter('**/**/*.{eot,svg,ttf,woff,woff2}'))
+    .pipe($.flatten())
+    .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/fonts/')));
+  return gulp.src(['bower_components/**/*.{eot,svg,ttf,woff,woff2}'])
+    //.pipe($.filter('**/**/*.{eot,svg,ttf,woff,woff2}'))
+    .pipe($.flatten())
+    .pipe(gulp.dest(path.join(conf.paths.dist, '/fonts/')));
+});
+
 gulp.task('other', function () {
   var fileFilter = $.filter(function (file) {
     return file.stat.isFile();
@@ -121,7 +143,7 @@ gulp.task('clean', function (done) {
 });
 
 <% if (imageMin) { -%>
-gulp.task('build', ['html', 'images', 'fonts', 'other']);
+gulp.task('build', ['html', 'images', 'fonts', 'other', 'fonts:dist']);
 <% } else { -%>
-gulp.task('build', ['html', 'fonts', 'other']);
+gulp.task('build', ['html', 'fonts', 'other', 'fonts:dist']);
 <% } -%>
