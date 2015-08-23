@@ -3,6 +3,8 @@
 var path = require('path');
 var gulp = require('gulp');
 var conf = require('./conf');
+var compress = require('compression');
+var modRewrite = require('connect-modrewrite');
 
 var browserSync = require('browser-sync');
 var browserSyncSpa = require('browser-sync-spa');
@@ -42,7 +44,15 @@ function browserSyncInit(baseDir, browser) {
   browserSync.instance = browserSync.init({
     startPath: '/',
     server: server,
-    browser: browser
+    browser: browser,
+    middleware: function(req,res,next){
+      var gzip = compress();
+      gzip(req,res,next);
+      proxyMiddleware,
+        modRewrite([
+          '!\\.\\w+$ /index.html [L]'
+        ]);
+    }
 <% if(qrCode) { -%>
   }, function(err, bs) {
     qrcode.generate(bs.options.get('urls').get('external'));
